@@ -14,15 +14,21 @@ const Home = () => {
        {/*text */}
         <div className="text-center xl:text-left order-2 xl:order-none">
           <span className="text-xl">Software Developer</span>
-          <h1 className="h1 mb-6">Hello I'm <br/> <span className="text-accent">Gagan Singh Rathore</span></h1>
+            <h1 className="h1 mb-6">Hello I&apos;m <br/> <span className="text-accent">Gagan Singh Rathore</span></h1>
             <p className="max-w-[500px] mb-9 text-white/80">I excel at crafting dynamic, high-performance applications with a keen eye for detail and a passion for delivering exceptional user experiences. With a strong foundation in both front-end and back-end technologies, I bring ideas to life through code.</p>
        
        {/* btn and socials */}
        <div className="flex flex-col xl:flex-row items-center gap-8">
-          <Button href="/assets/resume/Gagan Singh_21BCS084.pdf" variant="outline" size="lg" className="uppercase flex items-center gap-2">
-          <span>Download Resume</span>
-          <FiDownload className="text-xl"/>
-        </Button>
+              <Button
+                href="https://drive.google.com/file/d/1Y9K9feBJ8NLAf3sjttxCvvtjrDkwr6ps/view?usp=sharing"
+                variant="outline"
+                size="lg"
+                className="uppercase flex items-center gap-2"
+              >
+                <span>Download Resume</span>
+                <FiDownload className="text-xl" />
+              </Button>
+
 
         <div className="mb-8 xl:mb-0">
           <Social containerStyles="flex gap-6"  iconStyles="w-9 h-9 border border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-primary hover:transition-all duration-500"/>
