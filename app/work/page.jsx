@@ -49,34 +49,34 @@ const projects = [
     live:'',
     github: "https://github.com/Kunal-2417/Honey-hill-hotel-booking-site-.git"
   },
-  // {
-  //   num: '02',
-  //   category: 'Fullstack',
-  //   title: 'Product Comparator',
-  //   description: 'Comparing products from various online stores, showcasing data scraping skills using Python, alongside implemented user authentication, responsive design, and testing.',
-  //   stack: [
-  //     { name: 'ReactJS' },
-  //     { name: 'NodeJS' },
-  //     { name: 'MongoDB' },
-  //     { name: 'ExpressJS' },
-  //     { name: 'Javascript' },
-  //     { name: 'Python' },
-  //     { name: 'firebase' },
-  //     { name: 'Rozarpay gateway' },
-  //     { name: 'Html' },
-  //     { name: 'Css' },
-  //   ],
-  //   image: [
-  //     { img: '/assets/work/dental/1.png' },
-  //     { img: '/assets/work/dental/2.png' },
-  //     { img: '/assets/work/dental/3.png' },
-  //     { img: '/assets/work/dental/4.png' },
-  //     { img: '/assets/work/dental/5.png' },
-  //     { img: '/assets/work/dental/6.png' }
-  //   ],
-  //   live: '',
-  //   github: "https://github.com/Kunal-2417/Dummy-Project"
-  // },
+  {
+    num: '02',
+    category: 'Fullstack',
+    title: 'Product Comparator',
+    description: 'Comparing products from various online stores, showcasing data scraping skills using Python, alongside implemented user authentication, responsive design, and testing.',
+    stack: [
+      { name: 'ReactJS' },
+      { name: 'NodeJS' },
+      { name: 'MongoDB' },
+      { name: 'ExpressJS' },
+      { name: 'Javascript' },
+      { name: 'Python' },
+      { name: 'firebase' },
+      { name: 'Rozarpay gateway' },
+      { name: 'Html' },
+      { name: 'Css' },
+    ],
+    image: [
+      { img: '/assets/work/dental/1.png' },
+      { img: '/assets/work/dental/2.png' },
+      { img: '/assets/work/dental/3.png' },
+      { img: '/assets/work/dental/4.png' },
+      { img: '/assets/work/dental/5.png' },
+      { img: '/assets/work/dental/6.png' }
+    ],
+    live: '',
+    github: "https://github.com/Kunal-2417/Dummy-Project"
+  },
   {
     num: '03',
     category: 'Frontend',
