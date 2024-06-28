@@ -3,8 +3,9 @@
 import { motion } from 'framer-motion'
 import React,{useState} from 'react'
 
-import {Swiper ,SwiperSlide} from 'swiper/react'
-import 'swiper/css'
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 import {BsArrowUpRight,BsGithub} from 'react-icons/bs'
 
@@ -17,10 +18,10 @@ import {
 import Link from 'next/link'
 import Image from 'next/image'
 
-const project = [
+const projects = [
   {
     num: '01',
-    category: 'Full stack',
+    category: 'Fullstack',
     title: 'HoneyHill',
     description:
       'Hotel booking site developed using the MERN stack featuring hotel listings, search, booking, alongside implemented user authentication, responsive design, and testing.',
@@ -45,11 +46,12 @@ const project = [
       { img: '/assets/work/honeyhill/9.png' },
       { img: '/assets/work/honeyhill/10.png' }
     ],
-    github: "https://github.com/Kunal-2417/Honey-hill-hotel-booking-site.git"
+    live:'',
+    github: "https://github.com/Kunal-2417/Honey-hill-hotel-booking-site-.git"
   },
   {
     num: '02',
-    category: 'Full stack',
+    category: 'Fullstack',
     title: 'Product Comparator',
     description: 'Comparing products from various online stores, showcasing data scraping skills using Python, alongside implemented user authentication, responsive design, and testing.',
     stack: [
@@ -72,6 +74,7 @@ const project = [
       { img: '/assets/work/dental/5.png' },
       { img: '/assets/work/dental/6.png' }
     ],
+    live: '',
     github: "https://github.com/Kunal-2417/Dummy-Project"
   },
   {
@@ -93,6 +96,8 @@ const project = [
       { img: '/assets/work/algo-visual/5.png' },
       { img: '/assets/work/algo-visual/6.png' },
     ],
+    live: '',
+
     github: "https://github.com/Kunal-2417/algo-visualizer"
   },
   {
@@ -108,10 +113,12 @@ const project = [
       { name: 'Win32com' },
     ],
     image: [
-      { img: '/assets/work/attendance/1.png' },
-      { img: '/assets/work/attendance/2.png' },
+      { img: '/assets/work/attandence/1.png' },
+      { img: '/assets/work/attandence/2.png' },
     ],
-    github: "https://github.com/Kunal-2417/face-attendance"
+    live: '',
+
+    github: "https://github.com/Kunal-2417/face-attendance.git"
   },
   {
     num: '05',
@@ -125,15 +132,17 @@ const project = [
       { name: 'Css' },
     ],
     image: [
-      { img: '/assets/work/stonepaper-game/1.png' },
-      { img: '/assets/work/stonepaper-game/2.png' },
-      { img: '/assets/work/stonepaper-game/3.png' },
-      { img: '/assets/work/stonepaper-game/4.png' },
-      { img: '/assets/work/stonepaper-game/5.png' },
-      { img: '/assets/work/stonepaper-game/6.png' },
-      { img: '/assets/work/stonepaper-game/7.png' }
+      { img: '/assets/work/stonepapper-game/1.png' },
+      { img: '/assets/work/stonepapper-game/2.png' },
+      { img: '/assets/work/stonepapper-game/3.png' },
+      { img: '/assets/work/stonepapper-game/4.png' },
+      { img: '/assets/work/stonepapper-game/5.png' },
+      { img: '/assets/work/stonepapper-game/6.png' },
+      { img: '/assets/work/stonepapper-game/7.png' }
     ],
-    github: "https://github.com/Kunal-2417/stone-paper-scissors-game"
+    live: '',
+
+    github: "https://github.com/Kunal-2417/stone-paper-seissors-game.git"
   },
   {
     num: '06',
@@ -152,7 +161,9 @@ const project = [
       { img: '/assets/work/portfolio/3.png' },
       { img: '/assets/work/portfolio/4.png' }
     ],
-    github: "https://github.com/Kunal-2417/my-portfolio"
+    live: '',
+
+    github: "https://github.com/Kunal-2417/my-portfolio.git"
   },
   {
     num: '07',
@@ -172,7 +183,9 @@ const project = [
       { img: '/assets/work/webscraping/2.png' },
       { img: '/assets/work/webscraping/3.png' },
     ],
-    github: "https://github.com/Kunal-2417/web-scraper"
+    live: '',
+
+    github: "https://github.com/Kunal-2417/web-scraping.git"
   },
   {
     num: '08',
@@ -190,11 +203,13 @@ const project = [
       { img: '/assets/work/soldog/3.png' },
       { img: '/assets/work/soldog/4.png' },
     ],
-    github: "https://github.com/Kunal-2417/dog-dating-app"
+    live: '',
+
+    github: "https://github.com/Kunal-2417/SolDog.git"
   },
   {
     num: '09',
-    category: 'Full stack',
+    category: 'Frontend',
     title: 'News Buddy',
     description: 'A React application designed to fetch and display the latest news from an online news API. The app provides users with up-to-date news articles across various categories, featuring a clean and user-friendly interface.',
     stack: [
@@ -205,12 +220,14 @@ const project = [
       { name: 'Css' },
     ],
     image: [
-      { img: '/assets/work/newsbuddy/1.png' },
-      { img: '/assets/work/newsbuddy/2.png' },
-      { img: '/assets/work/newsbuddy/3.png' },
-      { img: '/assets/work/newsbuddy/4.png' },
+      { img: '/assets/work/newbuddy/1.png' },
+      { img: '/assets/work/newbuddy/2.png' },
+      { img: '/assets/work/newbuddy/3.png' },
+      { img: '/assets/work/newbuddy/4.png' },
     ],
-    github: "https://github.com/Kunal-2417/news-buddy"
+    live: '',
+
+    github: "https://github.com/Kunal-2417/News-App-using-class-base-comp.-.git"
   },
   {
     num: '10',
@@ -224,78 +241,144 @@ const project = [
       { name: 'Css' },
     ],
     image: [
-      { img: '/assets/work/text-utility/1.png' },
-      { img: '/assets/work/text-utility/2.png' },
-      { img: '/assets/work/text-utility/3.png' },
-      { img: '/assets/work/text-utility/4.png' },
-      { img: '/assets/work/text-utility/5.png' },
+      { img: '/assets/work/text-util/1.png' },
+      { img: '/assets/work/text-util/2.png' },
+      { img: '/assets/work/text-util/3.png' },
+      { img: '/assets/work/text-util/4.png' },
+      { img: '/assets/work/text-util/5.png' },
     ],
-    github: "https://github.com/Kunal-2417/text-utility"
+    live: '',
+
+    github: "https://github.com/Kunal-2417/Text-Utility.git"
   }
 ];
 
+const settings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 3000, // Adjust autoplay speed as needed
+  pauseOnHover: true, // Pause autoplay on hover
+};
 
 const Work = () => {
+  const [projectIndex, setProjectIndex] = useState(0);
+
+  const handleNextProject = () => {
+    setProjectIndex((prevIndex) => (prevIndex + 1) % projects.length);
+  };
+
+  const handlePrevProject = () => {
+    setProjectIndex((prevIndex) => (prevIndex - 1 + projects.length) % projects.length);
+  };
+
+  const project = projects[projectIndex];
+
   return (
-    <div className="container mx-auto">
-      <h1 className="text-4xl font-bold my-8">My Projects</h1>
-      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {project.map((proj) => (
-          <motion.div
-            key={proj.num}
-            className="p-4 bg-white shadow-md rounded-lg"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <h2 className="text-xl font-semibold mb-2">{proj.title}</h2>
-            <p className="text-gray-600 mb-4">{proj.description}</p>
-            <div className="flex space-x-4 mb-4">
-              <TooltipProvider>
-                <TooltipTrigger>
-                  <a
-                    href={proj.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center text-blue-500 hover:text-blue-600"
-                  >
-                    <BsGithub className="mr-1" /> View on GitHub
-                  </a>
-                </TooltipTrigger>
-              </TooltipProvider>
-            </div>
-            <Swiper
-              spaceBetween={10}
-              slidesPerView={1}
-              breakpoints={{
-                640: {
-                  slidesPerView: 2,
-                },
-                768: {
-                  slidesPerView: 3,
-                },
-                1024: {
-                  slidesPerView: 4,
-                },
-              }}
+    <motion.section
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      className='min-h-[80vh] flex flex-col justify-center py-12 xl:py-0'
+    >
+      <div className="container mx-auto ">
+
+        <div className="flex justify-between mb-8 ">
+          <div className='group'>
+
+          <button
+            onClick={handlePrevProject}
+            className="bg-white/5 text-white px-4 py-2 rounded group-hover:text-accent transition-colors duration-300"
             >
-              {proj.image.map((img, index) => (
-                <SwiperSlide key={index}>
-                  <Image
-                    src={img.img}
-                    alt={`Project ${proj.num} Image ${index + 1}`}
-                    width={300}
-                    height={200}
-                    className="rounded-lg shadow-md"
-                  />
-                </SwiperSlide>
+            Previous
+          </button>
+            </div>
+            <div className='group'>
+
+          <button
+            onClick={handleNextProject}
+            className="bg-white/5 text-white px-4 py-2 rounded group-hover:text-accent transition-colors duration-300"
+            >
+            Next
+          </button>
+            </div>
+        </div>
+
+        <div className='flex flex-col xl:flex-row xl:gap-[30px]'>
+          <div className='w-full xl:w-[50%] xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none'>
+            <div className='flex flex-col gap-[30px] h-[50%]'>
+              <div className='text-8xl leading-none font-extrabold text-transparent text-outline'>
+                {project.num}
+              </div>
+              <h2 className='text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize'>
+                {project.category} Project
+              </h2>
+              <p className='text-white/60 '>{project.description}</p>
+              <ul className=' grid grid-cols-2 xl:grid-cols-3 gap-4'>
+                {project.stack.map((item, index) => (
+                  <li key={index} className='text-xl text-accent'>
+                    {item.name}
+                    {index !== project.stack.length - 1 && ','}
+                  </li>
+                ))}
+              </ul>
+              <div className='border border-white/20'></div>
+              <div className='flex item-center gap-4'>
+                <Link href={project.live || project.github} target="_blank" rel="noopener noreferrer">
+                  <TooltipProvider delayDuration={100}>
+                    <Tooltip>
+                      <TooltipTrigger className='w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group'>
+                        <BsArrowUpRight className='text-white text-3xl group-hover:text-accent' />
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        <p>{project.live ? 'Live Project' : 'GitHub Repository'}</p>
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
+                </Link>
+                {project.github && (
+                  <Link href={project.github} target="_blank" rel="noopener noreferrer">
+                    <TooltipProvider delayDuration={100}>
+                      <Tooltip>
+                        <TooltipTrigger className='w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group'>
+                          <BsGithub className='text-white text-3xl group-hover:text-accent' />
+                        </TooltipTrigger>
+                        <TooltipContent>
+                          <p>GitHub Repository</p>
+                        </TooltipContent>
+                      </Tooltip>
+                    </TooltipProvider>
+                  </Link>
+                )}
+              </div>
+            </div>
+          </div>
+          <div className='w-full xl:w-[50%] relative items-center justify-center h-[200px] mt-auto mb-auto'>
+            <Slider {...settings} className='h-full'>
+              {project.image.map((item, index) => (
+                <div key={index} className='h-[460px]'>
+                  <div className="">
+                    <div className='relative w-full h-full'>
+                      <Image
+                        src={item.img}
+                        alt={`Project ${project.title} Image ${index + 1}`}
+                        width={500}
+                        height={500}
+                        className="object-cover"
+                      />
+                    </div>
+                  </div>
+                </div>
               ))}
-            </Swiper>
-          </motion.div>
-        ))}
+            </Slider>
+          </div>
+        </div>
+      
       </div>
-    </div>
+    </motion.section>
   );
 };
 
-
-export default Work
+export default Work;

@@ -19,15 +19,17 @@ const Home = () => {
        
        {/* btn and socials */}
        <div className="flex flex-col xl:flex-row items-center gap-8">
-              <Button
+
+              <a
                 href="https://drive.google.com/file/d/1Y9K9feBJ8NLAf3sjttxCvvtjrDkwr6ps/view?usp=sharing"
-                variant="outline"
-                size="lg"
-                className="uppercase flex items-center gap-2"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <span>Download Resume</span>
-                <FiDownload className="text-xl" />
-              </Button>
+                <Button variant="outline" size="lg" className="uppercase flex items-center gap-2">
+                  <span>Download Resume</span>
+                  <FiDownload className="text-xl" />
+                </Button>
+              </a>
 
 
         <div className="mb-8 xl:mb-0">
